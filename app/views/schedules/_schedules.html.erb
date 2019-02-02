@@ -1,0 +1,13 @@
+<div id="schedules">
+  <% schedules.each do |schedule| %>
+    <ul>
+      <li>
+        <%= schedule.start_time %>
+        <%= schedule.detail %>
+        <%= link_to '削除',
+          { action: 'destroy', id: schedule.id },
+          data: { confirm: 'Are you sure ?' }, method: :delete %>
+      </li>
+    </ul>
+  <% end %>
+</div>

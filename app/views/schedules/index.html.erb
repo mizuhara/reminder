@@ -1,2 +1,17 @@
-<h1>Schedules#index</h1>
-<p>Find me in app/views/schedules/index.html.erb</p>
+<% if @schedule.errors.any? %>
+  <% @schedule.errors.full_messages.each do |message| %>
+    <ul>
+      <li><%= message %></li>
+    </ul>
+  <% end %>
+<% end %>
+
+<%= form_with model: @schedule, local: true do |f| %>
+  <div id="datetimepicker"></div><br />
+  <%= f.hidden_field :start_date_time %>
+  <%= f.label :detail %><br />
+  <%= f.text_area :detail %><br />
+  <%= f.submit '新規登録' %>
+<% end %>
+
+<%= render :partial => "schedules", :locals => { schedules: @schedules } %>

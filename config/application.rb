@@ -16,6 +16,10 @@ module Reminder
     # -- all .rb files in that directory are automatically loaded after loading
     # the framework and any gems in your application.
 
+    config.time_zone = 'Tokyo'
+    config.active_record.default_timezone = :local
+    config.active_job.queue_adapter = :delayed_job
+
     config.generators do |g|
       g.test_frameworks :rspec,
         view_specs: false,

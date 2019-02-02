@@ -5,5 +5,7 @@ Rails.application.routes.draw do
     root 'schedules#index', as: :authenticated_root
   end
 
+  resources :schedules, only: [:index, :update, :create, :destroy]
+
   root 'home#index'
 end
