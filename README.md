@@ -15,7 +15,7 @@
 ## 1. リポジトリをクローンする
 
 ```
-$ git clone https://MasayaMizuhara@bitbucket.org/MasayaMizuhara/reminder.git
+$ git clone https://github.com/mizuhara/reminder.git
 ```
 
 ## 2. ディレクトリを移動する
