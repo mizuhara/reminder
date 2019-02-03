@@ -10,8 +10,8 @@
   <div id="datetimepicker"></div><br />
   <%= f.hidden_field :start_date_time %>
   <%= f.label :detail %><br />
-  <%= f.text_area :detail %><br />
-  <%= f.submit '新規登録' %>
+  <%= f.text_area :detail, :class=> "detail" %><br />
+  <%= f.submit '新規登録', :class=> "button"  %>
 <% end %>
 
 <%= render :partial => "schedules", :locals => { schedules: @schedules } %>

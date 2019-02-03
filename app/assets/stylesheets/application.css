@@ -14,3 +14,21 @@
  *= require_tree .
  *= require_self
  */
+
+header {
+  height: 30px;
+  background: linear-gradient(-157deg, rgb(158, 233, 187), rgb(52, 142, 109));
+  overflow: hidden;
+}
+
+nav {
+  float: right;
+}
+
+nav a {
+  color: #000;
+  font-weight: bold;
+  margin: 10px;
+  text-decoration: none;
+  vertical-align: middle;
+}
