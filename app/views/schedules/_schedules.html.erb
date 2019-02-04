@@ -1,12 +1,12 @@
 <div id="schedules">
   <% schedules.each do |schedule| %>
-    <ul>
-      <li>
+    <ul class="list-group list-group-flush">
+      <li class="list-group-item">
         <%= schedule.start_time %>
-        <%= schedule.detail %>
+        <%= schedule.detail_summary %>
         <%= link_to '削除',
           { action: 'destroy', id: schedule.id },
-          data: { confirm: 'Are you sure ?' }, method: :delete %>
+          data: { confirm: 'Are you sure ?' }, method: :delete, class: "btn btn-danger float-right" %>
       </li>
     </ul>
   <% end %>
